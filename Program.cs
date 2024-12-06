@@ -37,6 +37,7 @@ class Program
         {
             Console.WriteLine("Level " + unit.lvl);
             unit.exp += 1;
+            // unit.exp = 552.4198 * Math.pow(1.22878, unit.lvl);
             Console.WriteLine("Experience Points: " + unit.exp);
             Console.WriteLine("");
             
