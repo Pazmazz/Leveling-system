@@ -7,7 +7,28 @@
     public int def = 3;
 
     public int exp = 0;
+    int requiredExp = 0;
+    readonly int maxLvl = 20;
     public int lvl = 1;
+
+    public int GetRequiredExp(int lvl)
+    {
+        requiredExp = Lerp(0, maxLvl, lvl);
+        return requiredExp;
+    }
+
+    public int GainExp(int num)
+    {
+        exp += num;
+
+        if (exp >= requiredExp)
+        {
+            while (exp >= requiredExp)
+            {
+
+            }
+        }
+    }
 
     public void LevelUp()
     {
@@ -18,7 +39,7 @@
         hp += randomHp;
         atk += randomAtk;
         def += randomDef;
-        lvl += 1;
+        lvl++;
 
         Console.WriteLine("You levled up!\nYou are now level " + lvl);
         Console.WriteLine("Hp increased by " + randomHp + "!\nHP: " + hp);
